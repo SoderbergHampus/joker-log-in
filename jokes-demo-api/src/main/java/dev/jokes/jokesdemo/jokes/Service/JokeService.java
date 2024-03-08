@@ -1,26 +1,26 @@
 package dev.jokes.jokesdemo.jokes.Service;
 
 import dev.jokes.jokesdemo.jokes.Model.Joke;
-import dev.jokes.jokesdemo.jokes.Repository.InMemoryRepository;
+import dev.jokes.jokesdemo.jokes.Repository.JokeRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class InMemoryService {
+public class JokeService {
 
-    private final InMemoryRepository repo;
+    private final JokeRepository repo;
 
-    public InMemoryService(InMemoryRepository repo) {
+    public JokeService(JokeRepository repo) {
         this.repo = repo;
     }
 
     public List<Joke> getJokes() {
-        return repo.getJokes();
+        return repo.findAll();
     }
 
     public Joke getRandomJoke() {
-        List<Joke> jokes = repo.getJokes();
+        List<Joke> jokes = repo.findAll();
         if (jokes.isEmpty()) {
             return new Joke("There are no jokes");
         }
@@ -29,6 +29,6 @@ public class InMemoryService {
     }
 
     public Joke addJoke(String jokeContent) {
-        return repo.addJoke(jokeContent);
+        return repo.save(new Joke(jokeContent));
     }
 }
