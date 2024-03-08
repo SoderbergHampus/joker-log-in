@@ -39,7 +39,8 @@ function App() {
   }, [jwt]);
 
   const fetchRandomJoke = () => {
-    fetch(`http://localhost:8080/api/jokes/public/random`)
+    // fetch(`http://localhost:8080/api/jokes/public/random`)
+    fetch(import.meta.env.VITE_GET_RANDOM_JOKE_URL)
       .then((res) => res.json())
       .then((res) => res.content)
       .then((res) => setRandomJoke(res))

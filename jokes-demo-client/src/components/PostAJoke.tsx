@@ -16,7 +16,8 @@ const PostAJoke = ({ user }: PostAJokeProp) => {
       return;
     }
 
-    fetch('http://localhost:8080/api/jokes/secure/addJoke', {
+    // fetch('http://localhost:8080/api/jokes/secure/addJoke', {
+    fetch(import.meta.env.VITE_POST_NEW_JOKE_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
