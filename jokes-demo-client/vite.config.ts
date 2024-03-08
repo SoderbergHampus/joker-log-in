@@ -8,5 +8,5 @@ export default defineConfig(() => ({
     globals: true,
     environment: 'jsdom',
   },
-  base: './joker-log-in',
+  base: './',
 }));
