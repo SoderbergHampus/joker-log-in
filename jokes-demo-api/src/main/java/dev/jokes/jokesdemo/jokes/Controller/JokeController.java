@@ -3,7 +3,7 @@ package dev.jokes.jokesdemo.jokes.Controller;
 import dev.jokes.jokesdemo.jokes.Model.Joke;
 import dev.jokes.jokesdemo.jokes.Model.JokeListDTO;
 import dev.jokes.jokesdemo.jokes.Service.InMemoryService;
-import dev.jokes.jokesdemo.jokes.Service.JokeService;
+//import dev.jokes.jokesdemo.jokes.Service.JokeService;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;

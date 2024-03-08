@@ -1,16 +1,18 @@
 package dev.jokes.jokesdemo.jokes.Model;
 
 import jakarta.persistence.*;
+import org.springframework.stereotype.Component;
 
-@Entity
+//@Entity
+@Component
 public class Joke {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "joke_id")
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name = "joke_id")
     private Integer id;
 
-    @Column
+//    @Column
     private String content;
 
     public Joke() {

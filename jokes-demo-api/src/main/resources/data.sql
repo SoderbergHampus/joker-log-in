@@ -1,1 +1,0 @@
-INSERT INTO joke (content) VALUES ('joke ha ha ha');
