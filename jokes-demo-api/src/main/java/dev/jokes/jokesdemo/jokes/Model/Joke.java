@@ -20,6 +20,11 @@ public class Joke {
         this.content = content;
     }
 
+    public Joke(int id, String content) {
+        this.id = id;
+        this.content = content;
+    }
+
     public Integer getId() {
         return id;
     }

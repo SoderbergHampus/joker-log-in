@@ -7,17 +7,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class JokesRepository {
+public class InMemoryRepository {
 
     private final List<Joke> jokes;
 
-    public JokesRepository() {
+    public InMemoryRepository() {
         this.jokes = new ArrayList<>();
-        this.jokes.add(new Joke());
     }
 
     public List<Joke> getJokes() {
         return jokes;
+    }
+
+    public Joke addJoke(String jokeContent) {
+        int id = jokes.getLast().getId() + 1;
+        jokes.add(new Joke(id, jokeContent));
+        return jokes.getLast();
     }
 
 }

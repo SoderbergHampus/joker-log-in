@@ -2,6 +2,7 @@ package dev.jokes.jokesdemo.jokes.Controller;
 
 import dev.jokes.jokesdemo.jokes.Model.Joke;
 import dev.jokes.jokesdemo.jokes.Model.JokeListDTO;
+import dev.jokes.jokesdemo.jokes.Service.InMemoryService;
 import dev.jokes.jokesdemo.jokes.Service.JokeService;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
@@ -18,9 +19,14 @@ import java.util.List;
 @RequestMapping("/api/jokes")
 @CrossOrigin//(origins = "http://localhost:5173")
 public class JokeController {
-    private final JokeService service;
+    //private final JokeService service;
+    private final InMemoryService service;
 
-    public JokeController(JokeService service) {
+//    public JokeController(JokeService service) {
+//        this.service = service;
+//    }
+
+    private JokeController(InMemoryService service) {
         this.service = service;
     }
 
