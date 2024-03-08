@@ -18,6 +18,8 @@ class JokeServiceTest {
     @Test
     void shouldHave1Joke() {
         int expected = 1;
+        service.addJoke("Teeeeest");
+
         List<Joke> jokes = service.getJokes();
 
         assertEquals(expected, jokes.size());
